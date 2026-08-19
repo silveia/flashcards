@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button class="home-button" id="homeButton" type="button">home</button>
     <div class="context-menu" id="contextMenu" hidden></div>
 
     <main>
@@ -27,25 +26,40 @@
         </section>
 
         <section class="screen maker-screen" id="makerScreen" hidden>
-            <h1>create</h1>
-            <p>add a question bih</p>
-            <form id="cardForm">
-                <label for="questionInput">question</label>
-                <textarea id="questionInput" required placeholder="question here"></textarea>
-                <label for="answerInput">answer</label>
-                <textarea id="answerInput" required placeholder="im going to demolish u"></textarea>
-                <button class="basic-button" id="cardSubmitButton" type="submit">add flashcard</button>
-            </form>
-            <h2>current cards</h2>
-            <ol id="cardList"><li class="empty-message">no cards :(</li></ol>
+            <div class="page-content">
+                <div class="section-title">
+                    <button class="mini-back" id="backFromMaker" type="button">&lt;</button>
+                    <h1>create</h1>
+                </div>
+                <div class="maker-content">
+                    <form id="cardForm">
+                        <label for="questionInput">question</label>
+                        <textarea id="questionInput" required placeholder="question here"></textarea>
+                        <label for="answerInput">answer</label>
+                        <textarea id="answerInput" required placeholder="im going to demolish u"></textarea>
+                        <button class="basic-button" id="cardSubmitButton" type="submit">add flashcard</button>
+                    </form>
+                    <section class="cards-section">
+                        <h2>current cards</h2>
+                        <ol id="cardList"><li class="empty-message">no cards :(</li></ol>
+                    </section>
+                </div>
+            </div>
         </section>
 
         <section class="screen study-screen" id="studyScreen" hidden>
-            <h1>practice</h1>
-            <div class="question-box">
-                <h2 id="studyQuestion"></h2>
-                <div class="answer-options" id="answerOptions"></div>
-                <p id="studyFeedback" aria-live="polite"></p>
+            <div class="page-content">
+                <div class="section-title">
+                    <button class="mini-back" id="backFromStudy" type="button">&lt;</button>
+                    <h1>practice</h1>
+                </div>
+                <div class="practice-content">
+                    <h2 id="studyQuestion"></h2>
+                    <div class="practice-options-area">
+                        <div class="answer-options" id="answerOptions"></div>
+                        <p id="studyFeedback" aria-live="polite"></p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
